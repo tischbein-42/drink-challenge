@@ -244,7 +244,7 @@ function showSetup() {
       <div class="hint-box">
         <span class="rules-tag">Regeln</span><br>
         Max. 1× 0,5L Süßgetränk pro Tag. So wenig wie möglich, so viel Wasser wie möglich.<br><br>
-        <strong>Punkte:</strong> +1 pro Wasser-Glas, −5 pro Süßgetränk
+        <strong>Punkte:</strong> +3 pro Wasser, −5 pro Süßgetränk
       </div>
     </div>`;
 
@@ -443,7 +443,7 @@ async function renderRanking() {
       }
     });
     streak = Math.max(streak, cur);
-    return { name, sweet, water, days, streak, score: water*1 - sweet*5, i };
+    return { name, sweet, water, days, streak, score: water*3 - sweet*5, i };
   });
   totals.sort((a,b) => b.score - a.score);
   const maxScore = Math.max(...totals.map(t=>t.score), 1);
@@ -475,7 +475,7 @@ async function renderRanking() {
       </div>`).join('')}
     </div>
     <div class="hint-box" style="margin-top:8px;">
-      <strong>Punkterechnung:</strong> +1 pro 💧 Wasser-Glas, −5 pro 🥤 Süßgetränk
+      <strong>Punkterechnung:</strong> +3 pro 💧 Wasser, −5 pro 🥤 Süßgetränk
     </div>`;
 }
 
