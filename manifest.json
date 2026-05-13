@@ -2,7 +2,7 @@
   "name": "Getränke-Challenge",
   "short_name": "Challenge",
   "description": "Wasser vs. Süßgetränke Challenge",
-  "start_url": "/",
+  "start_url": "/drink-challenge/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#0a0a0a",
